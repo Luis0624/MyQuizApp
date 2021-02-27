@@ -1,0 +1,32 @@
+header{
+background-color: darkslategrey;
+width: 100%;
+/* height: 50%; */
+display: flex;
+flex-direction: column;
+align-items:center;
+
+}
+
+header, footer, .main, .header-title {
+    margin: 10px 0;
+}
+
+
+.highscore-window {
+    background-color: forestgreen;
+
+}
+
+body {
+    /* change to a background image before submitting */
+    background-color: rgb(153, 115, 115);
+
+}
+/* section flexboxes */
+h1, h3 {
+    font-size: 40px;
+    color: rgb(175, 10, 10);
+
+
+}
