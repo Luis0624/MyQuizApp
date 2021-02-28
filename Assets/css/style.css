@@ -1,5 +1,7 @@
+
+
 header{
-background-color: darkslategrey;
+/* background-color: darkslategrey; */
 width: 100%;
 /* height: 50%; */
 display: flex;
@@ -14,19 +16,33 @@ header, footer, .main, .header-title {
 
 
 .highscore-window {
-    background-color: forestgreen;
+    /* background-color: forestgreen; */
 
 }
 
 body {
+    margin: auto;
+    padding: 10px;
+    max-width: 500px;
     /* change to a background image before submitting */
     background-color: rgb(153, 115, 115);
 
 }
 /* section flexboxes */
-h1, h3 {
+.h1, h1, h3 {
     font-size: 40px;
     color: rgb(175, 10, 10);
+}
 
+.current-score {
+    color: yellowgreen
+}
 
+.timer-section {
+    color: rgb(175, 10, 10)
+}
+
+#start {
+    width: 30%;
+    text-align: center
 }

@@ -6,37 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>My Javascript Quiz App</title>
 </head>
-<body>
+<body class="p-3 bg-info text-white">
     <header>
         <section class="header-title">
-            <h1>My JavaScript Quiz App</h1>
+            <p class="h1">My JavaScript Quiz App</p>
         </section>
         <section class="highscore-window">
-            <p>Current highscore:<span class="yourHighscore"></span> </p>
+            <p class="h2"> Highscore: <span id="highScore"></span> </p>
+            <button class="btn btn-danger" id="scoreResetButton" onclick="deleteQuizHistory()">Clear ScoreBoard</button>
+        </section>
+        <section class="score-block" style="display:none">
+            <p class="h5"> Current score: <span id="currentScore"></span></p>
         </section>
         <section class="timer-section">
-            <p>Time left: <span class="time-left"></span></p>
+            <p class="h5">Time left: <span class="time-left"></span></p>
         </section>
+        
     </header>
-    <main class="main">
-        <section class="questions">
-        </section>
-        <section class="ans-choice">
-        </section>
-        <section class="ans-choice">
-        </section>
-        <section class="ans-choice">
-        </section>
-        <section class="ans-choice">
-        </section>
-        <section class="start-button">
-            <button type="button" class="starQuiz">Start the Quiz</button>
-        </section>
-        <section class="answer-validity">
-        </section>
-    </main>
+
+    <div id="quiz">
+        <div id="question">
+
+        </div>
+        <div id = "options">
+            <ol>
+                <li>
+                    <div>
+                    <input type="radio" style="display:none" name="option" id="option1" checked="checked">
+                    <label for="option1"></label>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" style="display:none" name="option" id="option2">
+                    <label for="option2"></label>    
+                </li>
+                <li>
+                    <input type="radio" style="display:none" name="option" id="option3">
+                    <label for="option3"></label>    
+                </li>
+                <li>
+                    <input type="radio" style="display:none" name="option" id="option4">
+                    <label for="option4"></label>    
+                </li>
+            </ol>
+        </div>
+    
+        <button class="btn btn-primary" id="start" onclick="startQuiz()">Start the Quiz</button>
+        <button class="btn btn-secondary" id="next" style="display:none" onclick="showNextQuestion()">Next</button>
+        <button class="btn btn-primary" id="done" name="complete" style="display:none" onclick="submitQuiz()">Submit</button>
+        
+    </div>
     <footer>
         <section>
             <h3>Developed by Luis Apuango</h3>
